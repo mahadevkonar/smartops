@@ -50,4 +50,13 @@ class lcsObject:
         return len(self.lineIds)
 
     def toString(self):
+        temp = ""
+        for s in self.lcsSeq:
+            temp = temp + s + " "
+        temp = temp + "\n\t\t{"
+        for i in self.lineIds:
+            temp = temp + i + ", "
+        return temp[0:len(temp)-2] + "}"
+
+
 
